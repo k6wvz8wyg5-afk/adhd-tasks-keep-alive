@@ -8,7 +8,7 @@ Standard GitHub-hosted runners in public repositories are free. This workflow us
 
 This reduces idle spin-down; it does not guarantee continuous availability. GitHub schedules can be delayed or dropped, and scheduled workflows in public repositories are disabled after 60 days without repository activity. Re-enable the schedule through Actions when needed; this workflow does not automatically prevent that expiration. Render's free service limits still apply, including 750 shared instance hours per workspace per calendar month. A continuously running service uses 720 hours in a 30-day month or 744 hours in a 31-day month, leaving only 30 or 6 hours for other free web services. If the shared allowance is exhausted, Render suspends free web services until the next month; the health check cannot override that suspension. The workflow can also be started manually through Actions.
 
-Configured scheduling, a successful manual run, and an observed scheduled run are separate verification steps. Check Actions for actual results; the presence of this file alone is not proof of operation.
+Configured scheduling, a successful manual run, and an observed scheduled run are separate verification steps. Check [Actions](https://github.com/k6wvz8wyg5-afk/adhd-tasks-keep-alive/actions) for actual results; the presence of this file alone is not proof of operation.
 
 Sources:
 - https://docs.github.com/en/billing/concepts/product-billing/github-actions
