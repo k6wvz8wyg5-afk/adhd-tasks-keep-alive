@@ -4,6 +4,10 @@ Is configured to request only the public health endpoint at https://adhd-tasks.o
 
 Standard GitHub-hosted runners in public repositories are free. This workflow uses `ubuntu-latest`, with no paid services or larger runners. The health request reports failure if the app or its database is unavailable.
 
+## Observed setup status
+
+GitHub automatic execution was not observed during setup. This workflow is retained as an unverified optional check. The primary scheduled keep-alive is configured separately on cron-job.org.
+
 ## Limits
 
 This reduces idle spin-down; it does not guarantee continuous availability. GitHub may restrict or disable Actions under its service limits and usage terms. GitHub schedules can be delayed or dropped, and scheduled workflows in public repositories are disabled after 60 days without repository activity. Re-enable the schedule through Actions when needed; this workflow does not automatically prevent that expiration. Render's free service limits still apply, including 750 shared instance hours per workspace per calendar month. A continuously running service uses 720 hours in a 30-day month or 744 hours in a 31-day month, leaving only 30 or 6 hours for other free web services. If the shared allowance is exhausted, Render suspends free web services until the next month; the health check cannot override that suspension. The workflow can also be started manually through Actions.
